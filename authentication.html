@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Beam</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="grey lighten-3">
+    <div class="longfazers">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    <!-- Password Reset Modal -->
+    <div id="passwordResetModal" class="modal">
+        <div class="modal-content">
+            <h5 class="center-align">Password Reset</h5>
+            <form action="" name="resetPasswordForm" onSubmit="resetPassword(event)">
+                <div class="row">
+                    <div class="col s12">
+                        <p>Please provide the email address that you used when you signed up for your account.
+                            <br>
+                            <br> We will send you an email that will allow you to reset your password.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="input-field col s12">
+                        <input id="reset_email" type="email" class="validate" spellcheck="false" required>
+                        <label for="reset_email">Email</label>
+                    </div>
+                    <div class="authError" id="reset-email-token"></div>
+                </div>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="modal-action modal-close waves-effect btn-flat grey lighten-5 green-text accent-4" onclick="closeResetPasswordModal()">Close</button>
+            <button type="submit" class="waves-effect btn-flat green white-text accent-4" id="resetEmailButton">Send</a>
+        </div>
+        </form>
+    </div>
+    <img src="images/beam.png" alt="Beam" width="250" class="titleImage" />
+    <div class="row authContainer">
+        <div id="authCard">
+            <div class="card">
+                <ul class="tabs authTabs">
+                    <li class="tab col s3 waves-effect" onclick="authNav()"><a href="#registerSection" class="active">Register</a></li>
+                    <li class="tab col s3 waves-effect" onclick="authNav()"><a href="#loginSection">Login</a></li>
+                </ul>
+                <div class="card-content">
+                    <div class="row">
+                        <div id="registerSection" class="col s12">
+                            <div class="row">
+                                <form action="" name="registerForm" onSubmit="authRegister(event)">
+                                    <div class="col s12 padding-0">
+                                        <div class="input-field">
+                                            <input type="email" id="register_email" class="validate" autocomplete="off" spellcheck="false" required />
+                                            <label for="register_email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 padding-0">
+                                        <div class="input-field">
+                                            <input type="password" id="register_password" autocomplete="new-password" class="validate" required />
+                                            <label for="register_password">Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 padding-0">
+                                        <button type="submit" class="btn btn-large green accent-4 center-block">Register</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div id="loginSection" class="col s12">
+                            <div class="row">
+                                <form action="" name="loginForm" onSubmit="authLogin(event)">
+                                    <div class="col s12 padding-0">
+                                        <div class="input-field">
+                                            <input type="email" id="login_email" class="validate" autocomplete="off" spellcheck="false" required />
+                                            <label for="login_email">Email</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 padding-0">
+                                        <div class="input-field">
+                                            <input type="password" id="login_password" autocomplete="new-password" class="validate" />
+                                            <label for="login_password" required>Password</label>
+                                        </div>
+                                    </div>
+                                    <div class="col s12 padding-0 center-align">
+                                        <button type="submit" class="btn btn-large green accent-4 center-block">Login</button>
+                                        <a class="btn-flat transparent green-text accent-4 forgot-button modal-trigger" href="#passwordResetModal">Forgot Password?</a>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                        <div class="authError red-text" id="firebase-token"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase.js"></script>
+    <script>
+        $('.modal-trigger').leanModal();
+    </script>
+    <script src="js/index.js"></script>
+</body>
+
+</html>

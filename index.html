@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <title>Beam</title>
+
+    <!-- MaterializeCSS -->
+    <link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/css/materialize.min.css'>
+
+    <!-- Material Icons -->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+    <!-- Code Mirror -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.css" />
+
+    <!-- Code Mirror Dark Theme -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/theme/seti.min.css" />
+
+    <!-- Firepad -->
+    <link rel="stylesheet" href="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.css" />
+
+    <!-- Beam -->
+    <link rel="stylesheet" href="css/main.css" />
+</head>
+
+<body>
+    <!-- Top Loader -->
+    <div class="progress white file-loader-container">
+        <div class="determinate file-loader green accent-4"></div>
+    </div>
+    <!-- Toggle Code Settings -->
+    <a class="btn-floating btn waves-effect waves-light red code-button"><i class="material-icons">code</i></a>
+    <!-- Toggle Nightmode -->
+    <a class="btn-floating btn waves-effect waves-light yellow accent-4 night-mode-button"><i class="material-icons">wb_sunny</i></a>
+    <button type="button" class="btn green accent-4 logout-button" onclick="logout()">Logout</button>
+    <!-- Beautify Selection -->
+    <a class='btn purple waves-effect beautify-button' href="javascript:autoFormatSelection()">Beautify Selection</a>
+    <!-- Language Dropdown Trigger -->
+    <a class='dropdown-button btn blue language-dropdown language-dropdown-button' href='#' data-activates='languageDropdown'>JS</a>
+
+    <!-- Language Dropdown Structure -->
+    <ul id='languageDropdown' class='dropdown-content language-dropdown'>
+        <li><a id="javascript" class="blue-text language-selection">JS</a></li>
+        <li><a id="text/html" class="blue-text language-selection">HTML</a></li>
+        <li><a id="text/css" class="blue-text language-selection">CSS</a></li>
+        <li><a id="application/xml" class="blue-text language-selection">XML</a></li>
+        <li><a id="text/x-csharp" class="blue-text language-selection">C#</a></li>
+    </ul>
+    <div id="firepad-container"></div>
+    <div class="file-field input-field file-upload">
+        <div class="btn green accent-4">
+            <span>File</span>
+            <input type="file" onchange="uploadFile()">
+        </div>
+        <div class="file-path-wrapper">
+            <input class="file-path" type="text">
+        </div>
+    </div>
+
+    <!-- jQuery -->
+    <script src='https://code.jquery.com/jquery-2.2.4.min.js'></script>
+
+    <!-- Materialize -->
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.6/js/materialize.min.js'></script>
+
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase.js"></script>
+
+    <!-- CodeMirror -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.17.0/codemirror.js"></script>
+
+    <!-- Code Formatting -->
+    <script src="js/formatting.js"></script>
+
+    <!-- CodeMirror Syntax Highlighting -->
+
+    <!-- Javascript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/mode/javascript/javascript.min.js"></script>
+    <!-- C Languages -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/mode/clike/clike.min.js"></script>
+    <!-- XML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/mode/xml/xml.min.js"></script>
+    <!-- HTML -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/mode/htmlmixed/htmlmixed.min.js"></script>
+    <!-- CSS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.19.0/mode/css/css.min.js"></script>
+
+    <!-- Firepad -->
+    <script src="https://cdn.firebase.com/libs/firepad/1.4.0/firepad.min.js"></script>
+
+    <!-- Beam -->
+    <script src="js/index.js"></script>
+</body>
+
+</html>
