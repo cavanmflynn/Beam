@@ -1,10 +1,11 @@
 // Firebase Config
+// Replace with your project's customized code snippet
 var config = {
-    apiKey: "AIzaSyBUIOa0QgNxkK9hOrOZCfmkf7928iAR9zI",
-    authDomain: "get-beam.firebaseapp.com",
-    databaseURL: "https://get-beam.firebaseio.com",
-    storageBucket: "get-beam.appspot.com",
-    messagingSenderId: "487313386297"
+  apiKey: "<API_KEY>",
+  authDomain: "<PROJECT_ID>.firebaseapp.com",
+  databaseURL: "https://<DATABASE_NAME>.firebaseio.com",
+  storageBucket: "<BUCKET>.appspot.com",
+  messagingSenderId: "<SENDER_ID>",
 };
 
 // Initialize Firebase
