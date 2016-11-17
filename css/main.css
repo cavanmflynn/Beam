@@ -160,3 +160,8 @@ button[type="submit"].btn-large.green.accent-4 {
   left: 25px;
   right: 25px;
 }
+@media(max-width: 968px) {
+  .firepad-toolbar-wrapper {
+    display: none;
+  }
+}
