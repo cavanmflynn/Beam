@@ -2,115 +2,140 @@ html, body {
   height: 100%;
   overflow-y: auto;
 }
+
 .margin-0 {
   margin: 0 !important;
 }
+
 .padding-0 {
   padding: 0 !important;
 }
+
 .center-block {
   width: 100%;
 }
+
 .titleImage {
   display:block;
   margin: 130px auto 30px auto;
 }
+
 .longfazers {
   display: none;
   position: absolute;
   width: 100%;
   height: 100%;
 }
+
 .longfazers span {
   position: absolute;
   height: 3px;
   width: 20%;
   background: #00c853;
 }
+
 .longfazers span:nth-child(1) {
   top: 20%;
   animation: lf 1.2s linear infinite;
   animation-delay: -5s;
 }
+
 .longfazers span:nth-child(2) {
   top: 40%;
   animation: lf2 1.5s linear infinite; 
   animation-delay: -1s;
 }
+
 .longfazers span:nth-child(3) {
   top: 60%;
   animation: lf3 1.2s linear infinite; 
 }
+
 .longfazers span:nth-child(4) {
   top: 80%;
   animation: lf4 1.5s linear infinite; 
   animation-delay: -3s;
 }
+
 @keyframes lf {0% {left: 200%;} 100% {left: -200%;opacity: 0;}}
 @keyframes lf2 {0% {left: 200%;} 100% {left: -200%;opacity: 0;}}
 @keyframes lf3 {0% {left: 200%;} 100% {left: -100%;opacity: 0;}}
 @keyframes lf4 {0% {left: 200%;} 100% {left: -100%;opacity: 0;}}
+
 .authContainer {
   margin: 0px auto !important;
 }
+
 #passwordResetModal {
   max-width: 500px;
 }
+
 #resetEmailButton {
   margin-right: 10px;
 }
+
 #authCard {
   max-width: 400px;
   margin-left: auto;
   margin-right: auto;
 }
+
 #authCard .card .card-content {
   overflow: hidden;
 }
+
 #authCard .tabs .tab a {
   color: #eee;
 }
+
 #authCard .tabs .tab a.active {
   color: #00c853;
 }
+
 #authCard .tabs .indicator {
   background-color: #00c853;
   background: none;
 }
+
 #registerSection, #loginSection {
   overflow: hidden;
 }
-/* label focus color */
+
 .input-field input[type=email]:focus + label {
   color: #00b44b;
 }
-/* label focus color */
+
 .input-field input[type=password]:focus + label {
   color: #00b44b;
 }
-/* label underline focus color */
+
 .input-field input[type=email]:focus {
   border-bottom: 1px solid #00b44b;
   box-shadow: 0 1px 0 0 #00b44b;
 }
-/* label underline focus color */
+
 .input-field input[type=password]:focus {
   border-bottom: 1px solid #00b44b;
   box-shadow: 0 1px 0 0 #00b44b;
 }
+
 button[type="submit"].btn-large.green.accent-4 {
   margin-top: 30px;
 }
+
 .forgot-button {
   margin: 0;
   padding-top: 20px;
 }
+
 .forgot-button:hover {
   color: #2e7d32 !important;
 }
+
 .authError {
   text-align: center;
 }
+
 .file-loader-container {
   position: absolute;
   top: 0;
@@ -118,26 +143,35 @@ button[type="submit"].btn-large.green.accent-4 {
   right: 0;
   margin: 0;
 }
+
 #firepad-container {
   width: 100%;
   height: 90%;
 }
+
+.powered-by-firepad {
+  display: none !important;
+}
+
 .code-button {
   position: absolute;
   top: 25px;
   right: 210px;
 }
+
 .night-mode-button {
   position: absolute;
   top: 25px;
   right: 160px;
 }
+
 .logout-button {
   position: absolute;
   top: 25px;
   right: 25px;
   z-index: 1000;
 }
+
 .beautify-button {
   position: absolute;
   top: 100px;
@@ -146,6 +180,7 @@ button[type="submit"].btn-large.green.accent-4 {
   opacity: .5;
   display: none;
 }
+
 .language-dropdown {
   position: absolute;
   top: 100px;
@@ -154,12 +189,14 @@ button[type="submit"].btn-large.green.accent-4 {
   opacity: .5;
   display: none;
 }
+
 .file-upload {
   position: absolute;
   bottom: 7px;
   left: 25px;
   right: 25px;
 }
+
 @media(max-width: 968px) {
   .firepad-toolbar-wrapper {
     display: none;
